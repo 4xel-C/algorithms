@@ -1,4 +1,6 @@
-public class selection_sort {
+package algo;
+
+public class SelectionSort {
 
     // Java implementation of the Selection Sort Algorithm on an integer array
 
@@ -23,13 +25,22 @@ public class selection_sort {
         return array;
     }
 
+    static void printArray(int array[]) {
+        int len = array.length;
+
+        for (int i = 0; i < len; i ++){
+            System.out.print(array [i] + " ");
+        }
+        System.out.println();
+    }
+
     public static void main(String[] args){
         
         // Testing selection sort algorithm
         int[] array = {1, 2, 6, 5, 3, 9, 98, 34, 3};
 
-        for (int i = 0; i < array.length; i++){
-            System.out.println(selectionSort(array)[i]);
-        }
+        printArray(array);
+        array = selectionSort(array);
+        printArray(array);
     }
 }
