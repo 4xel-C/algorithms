@@ -11,17 +11,16 @@ public class BinarySearch {
     static int binarySearch(int[] array, int num) {
         int start = 0;
         int end = array.length-1;
-        int middle = end / 2;
 
         while(start <= end){
+            int middle = (start + end) / 2;
+
             if (array[middle] == num) {
                 return middle;
             } else if (num < array[middle]) {
                 end = middle-1;
-                middle = (end + start)/2;
             } else if (num > array[middle]) {
                 start = middle+1;
-                middle = (start+end)/2;
             }
         }
         // return -1 if nothing if found
@@ -44,7 +43,7 @@ public class BinarySearch {
     
     printArray(array);
 
-    System.out.println(binarySearch(array, 2));
+    System.out.println(binarySearch(array, 14));
 
     }
 
