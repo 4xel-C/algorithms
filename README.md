@@ -5,6 +5,7 @@ This repository contains Java code demonstrating various algorithms, data struct
 ## Contents
 
 - **Search Algorithms** 
+    - [Linear Search](/LinearSearch.java)
     - [Binary Search](/BinarySearch.java)
 - **Sort Algorithms**
     - [Selection Sort](/SelectionSort.java)
