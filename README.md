@@ -13,6 +13,8 @@ This repository contains Java code demonstrating various algorithms, data struct
     - [Fibonacci](/FibonacciNumber.java)
 - **Recursion Exemples**
     - [Fibonacci](/FibonacciNumber.java)
+- **Maths**
+    - [Euclide Algorithm](/EuclideAlgorithm.java)
 
 ## Getting Started
 
