@@ -15,4 +15,13 @@ public class Helper{
 
         return returnValue;
     }
+
+    public static void printArray(int array[]) {
+        int len = array.length;
+
+        for (int i = 0; i < len; i ++){
+            System.out.print(array [i] + " ");
+        }
+        System.out.println();
+    }
 }

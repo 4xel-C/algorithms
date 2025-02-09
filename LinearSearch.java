@@ -4,6 +4,8 @@ public class LinearSearch{
      * Linear serach algorithm. 
      * Param: int[] (array of integer); n -> number searched.
      * Return value: the index of the searched item. Return -1 if no item was found
+     * 
+     * Complexity: O(n)
      */
     static int linearSearch(int[] array, int n){
 

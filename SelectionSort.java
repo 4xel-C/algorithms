@@ -1,7 +1,12 @@
+import utils.Helper;
+
 public class SelectionSort {
 
     // Java implementation of the Selection Sort Algorithm on an integer array
-
+    // time complexity:
+    // Best case: O(n)
+    // Average: O(n²)
+    // Worst: O(n²)
 
     static int[] selectionSort(int[] array){
 
@@ -23,22 +28,13 @@ public class SelectionSort {
         return array;
     }
 
-    static void printArray(int array[]) {
-        int len = array.length;
-
-        for (int i = 0; i < len; i ++){
-            System.out.print(array [i] + " ");
-        }
-        System.out.println();
-    }
-
     public static void main(String[] args){
         
         // Testing selection sort algorithm
         int[] array = {1, 2, 6, 5, 3, 9, 98, 34, 3};
 
-        printArray(array);
+        Helper.printArray(array);
         array = selectionSort(array);
-        printArray(array);
+        Helper.printArray(array);
     }
 }

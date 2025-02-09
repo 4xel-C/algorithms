@@ -2,6 +2,8 @@ public class BinarySearch {
     
     // Implementation of the binarySearch algorithm to search through a sorted algorithm
 
+    // Complexity: O(log(n))
+
     /** *
      * Search an element in a sorted array
      * @param array // sorted
