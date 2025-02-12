@@ -9,6 +9,7 @@ This repository contains Java code demonstrating various algorithms, data struct
     - [Binary Search](/BinarySearch.java)
 - **Sort Algorithms**
     - [Selection Sort](/SelectionSort.java)
+    - [Insertion Sort](/InsertionSort.java)
 - **Dynamic Programming**
     - [Fibonacci](/FibonacciNumber.java)
 - **Recursion Exemples**
