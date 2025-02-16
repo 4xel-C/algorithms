@@ -10,6 +10,7 @@ This repository contains Java code demonstrating various algorithms, data struct
 - **Sort Algorithms**
     - [Selection Sort](/SelectionSort.java)
     - [Insertion Sort](/InsertionSort.java)
+    - [Merge Sort](/MergeSort.java)
 - **Dynamic Programming**
     - [Fibonacci](/FibonacciNumber.java)
 - **Recursion Exemples**
