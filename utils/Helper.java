@@ -24,4 +24,14 @@ public class Helper{
         }
         System.out.println();
     }
+
+    // Function to facilitate the permutation between 2 elements in an array given their index.
+    public static void permutation(int array[], int index1, int index2) {
+        int temp = array[index1];
+        array[index1] = array[index2];
+        array[index2] = temp;
+        return;
+    }
+
+
 }

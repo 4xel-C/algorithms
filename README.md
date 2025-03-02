@@ -12,6 +12,7 @@ This repository contains Java code demonstrating various algorithms, data struct
     - [Merge Sort](/MergeSort.java)
     - [Insertion Sort](/InsertionSort.java)
     - [Selection Sort](/SelectionSort.java)
+    - [Quick Sort](/QuickSort.java)
 - **Dynamic Programming**
     - [Fibonacci](/FibonacciNumber.java)
 - **Recursion Exemples**
