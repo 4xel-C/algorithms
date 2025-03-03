@@ -1,7 +1,7 @@
 import utils.Helper;
 
 
-// Complexity of O(nlogN )
+// Complexity of O(nlogN)
 
 public class QuickSort {
 
@@ -48,7 +48,7 @@ public class QuickSort {
 
     public static void main(String args[]) {
         
-        int[] array = {1, 4, 9, 3, 2, 5, 8, 7, 10};
+        int[] array = {100, 4, 9, 3, 2, 5, 8, 7, 10};
 
         quickSort(array);
 
