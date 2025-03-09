@@ -1,6 +1,6 @@
 import utils.Helper;
 
-public class FibonacciNumber {
+public class FibonacciSequence {
 
     // Implementation of the Fibonacci problem: trying to find all path for 0 to N using 1 or 2 jumps.
     // ex for N = 3: {0-1-2-3}, {0-2-3}, {0-1-3}.
