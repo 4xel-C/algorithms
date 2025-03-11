@@ -9,7 +9,7 @@ public class QuickSort {
     static void quickSort(int[] array, int low, int high) {
 
         if (low < high) {
-            // Declare the pointer j to keep track of the left part of the pivot
+            // Declare the cursor j to keep track of the left part of the pivot
             int j = low;
 
             // Iterate through the array to find all the elements lower than the pivot, and put them on the left part
