@@ -5,17 +5,19 @@ This repository contains Java code demonstrating various algorithms, data struct
 ## Contents
 
 - **[Search Algorithms](/search)** 
-    - [Binary Search](/BinarySearch.java)
-    - [Linear Search](/LinearSearch.java)
+    - [Binary Search](/search/BinarySearch.java)
+    - [Linear Search](/search/LinearSearch.java)
+    - [Longest Substring](/search/LongestSubstring.java)
 - **[Sort Algorithms](/sort)**
-    - [Bubble Sort](/BubbleSort.java)
-    - [Insertion Sort](/InsertionSort.java)
-    - [Merge Sort](/MergeSort.java)
-    - [Quick Sort](/QuickSort.java)
-    - [Selection Sort](/SelectionSort.java)
+    - [Bubble Sort](/sort/BubbleSort.java)
+    - [Insertion Sort](/sort/InsertionSort.java)
+    - [Merge Sort](/sort/MergeSort.java)
+    - [Quick Sort](/sort/QuickSort.java)
+    - [Selection Sort](/sort/SelectionSort.java)
+    - [Shell Sort](/sort/ShellSort.java)
 - **[Maths](/maths)**
-    - [Euclide Algorithm](/EuclideAlgorithm.java)
-    - [Fibonacci Sequence](/FibonacciSequence.java)
+    - [Euclide Algorithm](/maths/EuclideAlgorithm.java)
+    - [Fibonacci Sequence](/maths/FibonacciSequence.java)
 
 ## Getting Started
 
