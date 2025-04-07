@@ -4,6 +4,11 @@ This repository contains Java code demonstrating various algorithms, data struct
 
 ## Contents
 
+- **[Maths](/maths)**
+    - [Euclide Algorithm](/maths/EuclideAlgorithm.java)
+    - [Fibonacci Sequence](/maths/FibonacciSequence.java)
+- **[Unclassified](/other)**
+    - **[Quick select](/other/QuickSelect.java)**
 - **[Search Algorithms](/search)** 
     - [Binary Search](/search/BinarySearch.java)
     - [Linear Search](/search/LinearSearch.java)
@@ -15,9 +20,6 @@ This repository contains Java code demonstrating various algorithms, data struct
     - [Quick Sort](/sort/QuickSort.java)
     - [Selection Sort](/sort/SelectionSort.java)
     - [Shell Sort](/sort/ShellSort.java)
-- **[Maths](/maths)**
-    - [Euclide Algorithm](/maths/EuclideAlgorithm.java)
-    - [Fibonacci Sequence](/maths/FibonacciSequence.java)
 
 ## Getting Started
 

@@ -1,5 +1,6 @@
 package utils;
 import java.util.function.Supplier;
+import java.util.Random;
 
 // Package containing helper functions to use for the algorythms.
 
@@ -34,4 +35,19 @@ public class Helper{
     }
 
 
+    /**
+     * Fisher-Yates shuffle algorithm in O(n)
+     * @param array The array to shuffle
+     */
+    public static void shuffle(int[] array) {
+
+        Random random = new Random();
+
+        int len = array.length;
+
+        for (int i = len - 1; i > 0; i--) {
+            int randomIndex = random.nextInt(i+1);
+            permutation(array, randomIndex, i);
+        }
+    }
 }
