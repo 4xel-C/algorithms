@@ -21,6 +21,11 @@ This repository contains Java code demonstrating various algorithms, data struct
     - [Selection Sort](/sort/SelectionSort.java)
     - [Shell Sort](/sort/ShellSort.java)
 
+--- 
+
+- **[DataStructure](/DataStructure/)**
+    - [Recursive list](/DataStructure/RecursiveList.java)
+
 ## Getting Started
 
 ### Prerequisites
