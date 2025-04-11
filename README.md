@@ -20,10 +20,12 @@ This repository contains Java code demonstrating various algorithms, data struct
     - [Quick Sort](/sort/QuickSort.java)
     - [Selection Sort](/sort/SelectionSort.java)
     - [Shell Sort](/sort/ShellSort.java)
+    - [Three Way Quick Sorting](/sort/ThreeWaySorting.java)
 
 --- 
 
 - **[DataStructure](/DataStructure/)**
+    - [Linked List](/DataStructure/LinkedList.java)
     - [Recursive list](/DataStructure/RecursiveList.java)
 
 ## Getting Started
