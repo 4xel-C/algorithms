@@ -25,6 +25,7 @@ This repository contains Java code demonstrating various algorithms, data struct
 --- 
 
 - **[DataStructure](/DataStructure/)**
+    - [Binary Tree](/DataStructure/BinaryTree.java)
     - [Linked List](/DataStructure/LinkedList.java)
     - [Recursive list](/DataStructure/RecursiveList.java)
 

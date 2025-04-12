@@ -181,9 +181,9 @@ public class LongestSubstring {
         String string1 = "chocolat Je mange du";
         String string2 = "Je bois un café chocolaté tout chaud.";
 
-        String substring = longestSubstring(string1, string2);
-        String substringNaiveRecursive = longestSubstring(string1, string2);
-        String substringDynamic = dynamicLongestSubstring(string1, string2);
+        // String substring = longestSubstring(string1, string2);
+        // String substringNaiveRecursive = longestSubstring(string1, string2);
+        // String substringDynamic = dynamicLongestSubstring(string1, string2);
         String obtDynamic = optimizedDynamicLongestSubstring(string1, string2);
 
         System.out.println(obtDynamic);
