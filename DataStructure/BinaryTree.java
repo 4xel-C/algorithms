@@ -127,8 +127,37 @@ public class BinaryTree {
         }
     }
 
+// ---------------------------------------------------------------------- Search method
+    // Overload the method to simplify the request
+    public boolean search(int value) {
+        return search(root, value);
+    }
+
+    public boolean search(Node node, int value) {
+        if (node == null) {
+            return false;
+        }
+
+        if (node.value == value)  {
+            return true;
+        } else if (value < node.value) {
+            return search(node.left, value);
+        } else {
+            return search(node.right, value);
+        }
+    }
 
 
+// ---------------------------------------------------------------------- Height of the tree (strating at 0)
+    public int height(Node node) {
+        if (node == null) return -1;
+        return 1 + Math.max(height(node.left), height(node.right));
+    }
+
+    // Overcharge for calling simplicity
+    public int height() {
+        return height(root);
+    }
 
     // Using main as testing method
     public static void main(String[] args) {
@@ -146,9 +175,9 @@ public class BinaryTree {
         tree.insert(12);
         tree.insert(10);
 
-        tree.postOrder();
+        System.out.println(tree.search(13));
+        System.out.println(tree.height());
 
     }
-
 
 }
