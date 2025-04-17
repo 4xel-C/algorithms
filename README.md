@@ -15,6 +15,7 @@ This repository contains Java code demonstrating various algorithms, data struct
     - [Longest Substring](/search/LongestSubstring.java)
 - **[Sort Algorithms](/sort)**
     - [Bubble Sort](/sort/BubbleSort.java)
+    - [Heap Sort](/sort/HeapSort.java)
     - [Insertion Sort](/sort/InsertionSort.java)
     - [Merge Sort](/sort/MergeSort.java)
     - [Quick Sort](/sort/QuickSort.java)
