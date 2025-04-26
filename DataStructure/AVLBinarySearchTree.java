@@ -109,8 +109,34 @@ public class AVLBinarySearchTree {
         tree.insert(8);
         tree.insert(12);
         tree.preOrder();
-
     }
+
+    // rotation on right method
+    private Node ror(Node node) {
+
+        // If no node on left, do nothing
+        if (node == null  || node.left == null) return node;
+
+        // if node on left -> make it the new root 
+        Node leftChild = node.left;
+        node.left = leftChild.right;
+        leftChild.right = node;
+
+        return leftChild;
+    }
+
+        // rotation on left method
+        private Node rol(Node node) {
+
+            // If no node on right, do nothing
+            if (node == null  || node.right == null) return node;
+    
+            // if node on right -> make it the new root 
+            Node rightChild = node.right;
+            node.right = rightChild.left;
+            rightChild.left = node;
+            return rightChild;
+        }
 
     
 }
