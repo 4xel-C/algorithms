@@ -34,6 +34,31 @@ public class AVLBinarySearchTree {
         preOrder(node.right);
     }
 
+        // ------------------------------------------------------------ Postorder display
+        public void postOrder() {
+            postOrder(root);
+        }
+    
+        private void postOrder(Node node) {
+            if (node == null) return;
+            postOrder(node.left);
+            postOrder(node.right);
+            System.out.println(node.value);
+        }
+
+        
+        // ------------------------------------------------------------ inOrder display
+        public void inOrder() {
+            inOrder(root);
+        }
+    
+        private void inOrder(Node node) {
+            if (node == null) return;
+            inOrder(node.left);
+            System.out.println(node.value);
+            inOrder(node.right);
+        }
+
     // ------------------------------------------------------------ Height calculation
     public int height() {
         return height(root);
@@ -144,13 +169,13 @@ public class AVLBinarySearchTree {
     // ------------------------------------------------------------ Deletion
     private Node delete(int element, Node node) {
 
-        // If reach the end of the tring without a find, return the node.
+        // If reach the end of the tree without a find, return the node.
         if (node == null) return node;
 
         // If node is found delete it depending of his child
         if (element == node.value) {
 
-            // if no childs, delete the node
+            // if no children, delete the node
             if (node.left == null && node.right == null) {
                 return null;
 
@@ -160,7 +185,7 @@ public class AVLBinarySearchTree {
             } else if (node.right == null) {
                 return node.left;
 
-            // if 2 childs -> return the max of the left tree or the min of the right tree
+            // if 2 children -> return the max of the left tree or the min of the right tree
             } else {
                 int max = max(node.left);
                 node.value = max;
@@ -176,8 +201,22 @@ public class AVLBinarySearchTree {
         }
 
         return balanceNode(node);
-
     }
+
+        // ------------------------------------------------------------ Search
+        public boolean search(int element) {
+            return search(element, root);
+        }
+
+        private boolean search(int element, Node node) {
+
+            // Base case
+            if (node == null) return false;
+            if (node.value == element) return true;
+
+            if (element < node.value) return search(element, node.left);
+            else return search(element, node.right);
+        }
 
     public static void main(String[] args) {
     
@@ -189,7 +228,9 @@ public class AVLBinarySearchTree {
         tree.insert(14);
         tree.insert(11);
         tree.preOrder();
+        System.out.println(tree.search(12));
+        tree.delete(14);
+        tree.delete(13);
+        tree.preOrder();
     }
-    
-    
 }
