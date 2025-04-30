@@ -5,6 +5,7 @@ public class HeapSort {
     /**
      * Heap sort method: transform the array into a max heap, then delete maximum by exchanging it with the last item of the array and sinking the exchanged item.
      * The heap will be 0 indexed, that will slightly differ from the MaxHeap implementation.
+     * Apply the sink method on the first half of the array (the other half are only leaves, and cannot sink further)
      * @param array The array to sort.s
      */
     public static void heapSort(int[] array) {
