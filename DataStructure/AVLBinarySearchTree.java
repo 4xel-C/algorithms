@@ -17,7 +17,7 @@ public class AVLBinarySearchTree {
     
     Node root; // root of the tree
     
-    // ------------------------------------------------------------ Constructor
+    // --------------------------------------------------------------- Constructor
     public AVLBinarySearchTree() {
         root = null;
     }

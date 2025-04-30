@@ -26,11 +26,12 @@ This repository contains Java code demonstrating various algorithms, data struct
 --- 
 
 - **[DataStructure](/DataStructure/)**
-    - [AVL Binary Search Tree](/DataStructure/AVLBinarySearchTree.java): Binary search tree with balancing methods to keep operation complexity around O(log(n))
+    - [AVL Binary Search Tree](/DataStructure/AVLBinarySearchTree.java): Binary search tree with balancing methods to keep operation complexity around O(log(n)).
     - [Binary Tree](/DataStructure/BinaryTree.java)
     - [Max Binary Heap](/DataStructure/MaxHeap.java)
     - [Linked List](/DataStructure/LinkedList.java)
     - [Recursive list](/DataStructure/RecursiveList.java)
+    - [Left leaning red-black Binary search tree](/DataStructure/LLRBTree.java): A red-black binary tree with insertion method.
 
 ## Getting Started
 
