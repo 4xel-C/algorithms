@@ -5,31 +5,29 @@ public class SortExercice {
     
     public static void quickSort(int[] array, int start, int end) {
 
-        if (start > end) {
-            return;
-        }
+        if (start > end) return;
 
-        // Use of quick sort taking the pivot at the end of the array
-        int key = array[end];
+        int key = array[end]; // taking the last item in the array as the key for the sort. 
+        int cursor = start;
 
-        int j = start;
-        for (int i = start; i <= end; i++) {
+        for (int i = start; i < end; i++) {
+
             if (array[i] < key) {
-                Helper.permutation(array, j, i);
-                j++;
+                Helper.permutation(array, i, cursor++);
             }
         }
+        Helper.permutation(array, cursor, end);
+        quickSort(array, start, cursor - 1);
+        quickSort(array, cursor + 1, end);
 
-        Helper.permutation(array, j, end);
-
-        quickSort(array, start, j-1);
-        quickSort(array, j+1, end);
     }
 
-    // surchargemethod overloading to only pass the array to the method
+
+    // overload the method
     public static void quickSort(int[] array) {
         int start = 0;
         int end = array.length - 1;
+
         quickSort(array, start, end);
     }
 
