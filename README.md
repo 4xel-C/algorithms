@@ -33,6 +33,11 @@ This repository contains Java code demonstrating various algorithms, data struct
     - [Recursive list](/DataStructure/RecursiveList.java)
     - [Left leaning red-black Binary search tree](/DataStructure/LLRBTree.java): A red-black binary tree with insertion method.
 
+--- 
+
+- **[Problems](/problems/)**
+    - [Four sum problem](/problems/FourSum.java): Resolution of the four sum problem using hashmap to improve efficiency and bring a complexity of O(n²).
+
 ## Getting Started
 
 ### Prerequisites
