@@ -22,6 +22,8 @@ This repository contains Java code demonstrating various algorithms, data struct
     - [Selection Sort](/sort/SelectionSort.java)
     - [Shell Sort](/sort/ShellSort.java)
     - [Three Way Quick Sorting](/sort/ThreeWaySorting.java)
+    - [Counting sort](/sort/CountingSort.java)
+    - [RadixSort](/sort/RadixSort.java)
 
 --- 
 
