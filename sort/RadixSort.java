@@ -5,7 +5,7 @@ import utils.Helper;
  */
 public class RadixSort {
     
-    private static final int r = 256; // UTF-8 character size.
+    private static final int R = 256; // Extended ASCII bits size.
 
 
     /**
@@ -22,7 +22,7 @@ public class RadixSort {
 
         // Sort by each character starting from the end.
         for (int d = w - 1; d >= 0; d--) {
-            int[] count = new int[r + 1]; // count array to count the occurence of each character. Offset +1 for cumul calculation. Need to be reinitialized on each loop.
+            int[] count = new int[R + 1]; // count array to count the occurence of each character. Offset +1 for cumul calculation. Need to be reinitialized on each loop.
 
             // Apply the counting sort algorithm
             for (int i = 0; i < length; i++) {
@@ -30,7 +30,7 @@ public class RadixSort {
             }
 
             // Generate the cummulation on the count array.
-            for (int i = 0; i < r; i++) {
+            for (int i = 0; i < R; i++) {
                 count[i+1] += count[i];
             }
 
@@ -47,6 +47,69 @@ public class RadixSort {
     }
 
 
+    /**
+     * Most significant digit first -> Sort the strings starting with the first letter. Can be adapted to different string length.
+     * @param array
+     */
+    public static void msdSort(String[] array) {
+
+        int len = array.length; // number of strings
+        String[] copy = new String[len];
+        msdSort(array, 0, len - 1, 0, copy);
+    }
+
+    // recursive function to sort using msdSort algorithm.
+    private static void msdSort(String[] array, int low, int high, int d, String[] copy) {
+
+        if (high <= low) return; // recursive base case.
+
+        int[] count = new int[R + 2]; // Extended ASCII symbols -> considering 2 offset for cummulation computing and 0 value.
+
+
+        // Sort each string of the array
+        for (int i = low; i <= high; i++) {
+
+            // Build the count array
+            count[charAt(array[i], d) + 2]++;
+        }
+
+        // calculate the cummulation.
+        for (int i = 0 ; i < R + 1; i++) {
+            count[i+1] += count[i];
+        } 
+
+        // Copy the string in the corect order in the auxiliary array (will be 0 indexed because of the cummulation)
+        for (int i = low; i <= high; i++) {
+            copy[count[charAt(array[i], d) + 1]++] = array[i];
+        }
+
+        // copy in the correct order in place inside the original array
+        for (int i = low; i <= high; i++) {
+            array[i] = copy[i - low]; // recuperate the first string in the 0 indexed array.
+        }
+
+        // recursively apply the sort function to all the cluster on the d+1th character.
+        for (int i = 0; i < R; i++) {
+            msdSort(array, low + count[i], low + count[i+1]-1, d+1, copy);
+        }
+        
+    }
+
+    /**
+     * Helper method to extract the integert value of a character from a String at index d. Return -1 if the index is out of range (> string length).
+     * @param string String to extract the character from.
+     * @param d dth character to extract from the string.
+     * @return
+     */
+    private static int charAt(String string, int d) {
+
+        int len = string.length();
+
+        if (d >= len) return -1;
+        return string.charAt(d);
+    }
+
+
 
     /**
      * Testing method.
@@ -55,16 +118,17 @@ public class RadixSort {
     public static void main(String args[]) {
 
         String[] array1 = {
-            "ABCD",
-            "LKDN",
-            "LKDI",
-            "PDOD",
-            "AWLC", 
-            "DOBV",
+            "ABCGD",
+            "LKDNDS",
+            "LKDDFGI",
+            "PDDFGOD",
+            "PDDFG",
+            "AWDFGLC", 
+            "DGDOBV",
             "ODFK"
         };
 
-        lsdSort(array1);
+        msdSort(array1);
 
         for (int i = 0; i < array1.length; i++) {
             System.out.println(array1[i]);
