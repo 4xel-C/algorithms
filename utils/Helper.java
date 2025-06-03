@@ -34,6 +34,14 @@ public class Helper{
         return;
     }
 
+        // Function to facilitate the permutation between 2 elements in an array given their index.
+    public static void permutation(String array[], int index1, int index2) {
+        String temp = array[index1];
+        array[index1] = array[index2];
+        array[index2] = temp;
+        return;
+    }
+
 
     /**
      * Fisher-Yates shuffle algorithm in O(n)

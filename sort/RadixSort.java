@@ -96,6 +96,47 @@ public class RadixSort {
     }
 
     /**
+     * 3-way radix sort: mix the radix sort with quick sort. Recursively sorting the the array not containing the pivot. Efficient for Strings having common prefixes.
+     * @param array
+     */
+    public static void threeWayRadixSort(String[] array) {
+        threeWayRadixSort(array, 0, array.length - 1, 0);
+    }
+
+    private static void threeWayRadixSort(String[] array, int low, int high, int d) {
+
+        if (low >= high) return;
+
+        int lowp = low; // low pointer
+        int i = low; // mid pointer.
+        int highp = high; // high pointer.
+        int pivot = charAt(array[low], d);
+
+        while(i <= highp) {
+
+            // if element is lower than the pivot, place the element on the low pointer and increment both low and mid.
+            if (charAt(array[i], d) < pivot) {
+                Helper.permutation(array, lowp++, i++);
+            }
+
+            // if element if equal to the pivot, increase the middle.
+            else if (charAt(array[i], d) == pivot) {
+                i++;
+            }
+
+            // if element if higher than the pivot, exachange with the high pointer and decrease it.
+            else if (charAt(array[i], d) > pivot) {
+                Helper.permutation(array, highp--, i);
+            }
+        }
+
+        // When sorting if finish: sort the lower part and the upper part on the same d value, and sort the middle part on the d + 1 value.
+        threeWayRadixSort(array, low, lowp - 1, d); // sort lower part
+        threeWayRadixSort(array, lowp, highp, d+1); // sort middle part
+        threeWayRadixSort(array, highp + 1, high, d); // sort high part
+    }
+
+    /**
      * Helper method to extract the integert value of a character from a String at index d. Return -1 if the index is out of range (> string length).
      * @param string String to extract the character from.
      * @param d dth character to extract from the string.
@@ -108,7 +149,6 @@ public class RadixSort {
         if (d >= len) return -1;
         return string.charAt(d);
     }
-
 
 
     /**
@@ -128,7 +168,7 @@ public class RadixSort {
             "ODFK"
         };
 
-        msdSort(array1);
+        threeWayRadixSort(array1);
 
         for (int i = 0; i < array1.length; i++) {
             System.out.println(array1[i]);
