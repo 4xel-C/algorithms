@@ -119,7 +119,7 @@ public class RadixSort {
                 Helper.permutation(array, lowp++, i++);
             }
 
-            // if element if equal to the pivot, increase the middle.
+            // if element if equal to the pivot , increase the middle.
             else if (charAt(array[i], d) == pivot) {
                 i++;
             }
