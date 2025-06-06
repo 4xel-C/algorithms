@@ -1,4 +1,4 @@
-import utils.Helper;
+
 
 /**
  * Radix sort 
@@ -58,8 +58,7 @@ public class RadixSort {
     private static void msdSort(String[] array, String[] aux, int low, int high, int d) {
 
         if (low >= high) return;
-
-        int n = array.length;
+        
         int[] count = new int[R + 2]; // Creation of the count array, +2 for the negative value of out of range character and the cummulative space calculation.
 
         // Count
