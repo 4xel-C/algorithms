@@ -3,12 +3,12 @@ import java.util.Queue;
 import java.util.LinkedList;
 
 /**
- * Implementation of a ternary search Trie
+ * Implementation of a ternary search Trie. Complexity of O(L x log n), but less memory usage compare to a classic Trie.
  */
 public class TernarySearchTrie{ 
 
     private class Node {
-        private boolean word;
+        private boolean word = false;
         private char character;
         private Node left, mid, right;
     }
@@ -57,7 +57,7 @@ public class TernarySearchTrie{
         int d = 0; // Character counter
         char c;
 
-        while( cursor != null && d < string.length()) {
+        while( cursor != null && d < string.length() - 1) {
             c = string.charAt(d);
             if (c < cursor.character) {
                 cursor = cursor.left;
@@ -102,7 +102,7 @@ public class TernarySearchTrie{
 
         collect(node.left, prefix, result);
         if (node.word) result.add(prefix + node.character);
-        collect(node.mid, prefix, result);
+        collect(node.mid, prefix + node.character, result);
         collect(node.right, prefix, result);
     }
 
@@ -115,7 +115,25 @@ public class TernarySearchTrie{
      */
     public static void main(String[] args) {
         
+        TernarySearchTrie trie = new TernarySearchTrie();
 
+        trie.put("hello");
+        trie.put("hamburger");
+        trie.put("history");
+        trie.put("ancient");
+        trie.put("xylophone");
+        trie.put("state");
+
+        trie.delete("hello");
+
+        System.out.println(trie.contain("hello"));
+        System.out.println(trie.contain("hamburger"));
+
+        Iterable<String> inorder = trie.inOrder();
+
+        for (String word : inorder) {
+            System.out.println(word);
+        }
     }
 
 }

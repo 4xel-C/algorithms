@@ -1,4 +1,6 @@
 package DataStructure;
+import java.util.Queue;
+import java.util.LinkedList;
 
 // Implementation of a trie using the 26 letters of the alphabet (all lowercase).
 public class Trie {
@@ -34,7 +36,7 @@ public class Trie {
             return node;
         }
 
-        int index = string.charAt(d) - 97; // 1 indexed.
+        int index = string.charAt(d) - 97; // 0 indexed.
         node.next[index] = insert(string, node.next[index], d+1);
         return node;
     }
@@ -79,6 +81,32 @@ public class Trie {
         if (node != null) node.value = false;
     }
 
+
+    /**
+     * Return an iterable of all the words in order.
+     * @return
+     */
+    public Iterable<String> inOrder() {
+        Queue<String> result = new LinkedList<>();
+
+        collect(root, "", result);
+
+        return result;
+    }
+
+    // Collect inOrder all the words in the trie.
+    private void collect(Node node, String prefix, Queue<String> result) {
+        if (node == null) return;
+
+        if (node.value) result.add(prefix);
+
+        // Iterate through all the letters in the word starting for the first to the last.
+        for (int i = 0; i < R; i++) {
+            char character = (char) (i + 97);
+            collect(node.next[i], (String) prefix + character, result);
+        }
+    }
+
     public static void main(String[] args) {
         Trie trie = new Trie();
 
@@ -90,7 +118,15 @@ public class Trie {
         System.out.println(trie.inTrie("sdflkjh"));
         trie.delete("bonjour");
         System.out.println(trie.inTrie("bonjour"));
+        trie.insert("bonjour");
+        trie.insert("aaaa");
+        trie.insert("abaa");
+
+        Iterable<String> inorder = trie.inOrder();
+
+        for (String word : inorder) {
+            System.out.println(word);
+        }
 
     }
-
 }
