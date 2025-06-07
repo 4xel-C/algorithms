@@ -107,6 +107,51 @@ public class Trie {
         }
     }
 
+
+    /**
+     * Find all the words containing the specified prefix.
+     * @param prefix
+     * @return A linkedlist of the result.
+     */
+    public Iterable<String> prefixSearch(String prefix) {
+        Queue<String> result = new LinkedList<>();
+        
+        // get the node containing the final letter of the prefix.
+        Node startNode = get(prefix);
+        if (startNode == null) return result;
+        collect(startNode, prefix, result);
+        return result;
+    }
+
+
+    /**
+     * Method to find the longest prefix of a given querie.
+     * @param string
+     * @return
+     */
+    public String longestPrefix(String string) {
+
+        Node cursor = root;
+        int n = string.length();
+        String longestPrefix = "";
+        String currentWord = "";
+
+        for (int i = 0; i < n; i++) {
+            int index = string.charAt(i) - 97; // 0 indexed.
+            char c = (char) (index + 97);
+
+            cursor = cursor.next[index];
+            if (cursor == null) break; // If we reach a null node, break the iteration.
+
+            currentWord += c;
+            if (cursor.value) longestPrefix = currentWord;
+        }
+
+        return longestPrefix;
+    }
+
+
+
     public static void main(String[] args) {
         Trie trie = new Trie();
 
@@ -127,6 +172,18 @@ public class Trie {
         for (String word : inorder) {
             System.out.println(word);
         }
+
+        System.out.println();
+        System.out.println("Prefix search of 'par'");
+        Iterable<String> prefixSearch = trie.prefixSearch("par");
+        for (String word : prefixSearch) {
+            System.out.println(word);
+        }
+
+        System.out.println();
+        System.out.println("Search longestPrefix of 'pardonneras'");
+        String longestPrefix = trie.longestPrefix("pardonneras");
+        System.out.println(longestPrefix);
 
     }
 }
