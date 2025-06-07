@@ -34,7 +34,8 @@ This repository contains Java code demonstrating various algorithms, data struct
     - [Left leaning red-black Binary search tree](/DataStructure/LLRBTree.java): A red-black binary tree with insertion method.
     - [Linked List](/DataStructure/LinkedList.java)
     - [Recursive list](/DataStructure/RecursiveList.java)
-    - [Trie](/DataStructure/Trie.java)
+    - [Ternary Search Trie](/DataStructure/TernarySearchTrie.java): Strings manipulation and operation, better memory usage compared to a Trie.
+    - [Trie](/DataStructure/Trie.java): Strings manipulation and operation.
     - [Union find](/DataStructure/UnionFind.java): An implementation of the Union find datastructure, using path compression and weighed union.
 
 --- 
