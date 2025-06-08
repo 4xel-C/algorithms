@@ -13,6 +13,7 @@ This repository contains Java code demonstrating various algorithms, data struct
     - [Binary Search](/search/BinarySearch.java)
     - [Linear Search](/search/LinearSearch.java)
     - [Longest Substring](/search/LongestSubstring.java)
+    - [Substring Search](/search/SubstringSearch.java): Implementation of various algorithm of substring search, such as Knuth-Morris-Pratt algorithm, Boyer-Moore or Rabin-Karp.
 - **[Sort Algorithms](/sort)**
     - [Bubble Sort](/sort/BubbleSort.java)
     - [Heap Sort](/sort/HeapSort.java)

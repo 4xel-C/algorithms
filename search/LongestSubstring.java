@@ -1,6 +1,6 @@
 public class LongestSubstring {
 
-    // ------------------------------------------------------Naive iterative method
+    // ------------------------------------------------------Naive iterative method (brute force)
     // Complexity: O(n²)
     public static String longestSubstring(String text1, String text2) {
 
@@ -174,8 +174,6 @@ public class LongestSubstring {
         }
         return substring;
         }
-        
-
 
     public static void main(String[] args) {
         String string1 = "chocolat Je mange du";
