@@ -106,7 +106,13 @@ public class SubstringSearch {
             for (int j = m - 1; j >= 0; j--) {
 
                 if (text.charAt(i + j) != pattern.charAt(j)) {
-                    skip = Math.max(1, j - right[text.charAt(i + j)]);
+
+                    // If the letter checked in test not in the pattern, skip 1 element after the letter;
+                    if (right[text.charAt(i + j)] == -1) {
+                        skip = j + 1;
+                    } else { 
+                        skip = Math.max(1, j - right[text.charAt(i + j)]);
+                    }
                     break;
                 }
 
@@ -185,8 +191,8 @@ public class SubstringSearch {
      */
     public static void main(String[] args) {
 
-        String text = "Les sanglots longs des violons de l'autonme blessent mon couleur d'une langueur monotone.";
-        String pattern = "longs";
+        String text = "Les sanglots longs des violons de l'autonme blessent mon coeur d'une langueur monotone.";
+        String pattern = "lan";
 
         System.out.println("Knuth Morris Pratt search:");
         System.out.println(knuthMorrisPratt(text, pattern));
