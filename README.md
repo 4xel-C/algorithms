@@ -43,6 +43,7 @@ This repository contains Java code demonstrating various algorithms, data struct
 
 - **[Problems](/problems/)**
     - [Four sum problem](/problems/FourSum.java): Resolution of the four sum problem using hashmap to improve efficiency and bring a complexity of O(n²).
+    - [CyclicRotation](/problems/CyclicRotation.java): Algorithm to frind out if a string is a cyclic rotation of another string using substring search with a complexity of O(n).
 
 ## Getting Started
 
