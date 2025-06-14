@@ -11,6 +11,7 @@ This repository contains Java code demonstrating various algorithms, data struct
     - **[Quick select](/other/QuickSelect.java)**
 - **[Search Algorithms](/search)** 
     - [Binary Search](/search/BinarySearch.java)
+    - [Depth First Search](/search/DirectedDFS.java)
     - [Linear Search](/search/LinearSearch.java)
     - [Longest Substring](/search/LongestSubstring.java)
     - [Substring Search](/search/SubstringSearch.java): Implementation of various algorithm of substring search, such as Knuth-Morris-Pratt algorithm, Boyer-Moore or Rabin-Karp.
@@ -31,6 +32,7 @@ This repository contains Java code demonstrating various algorithms, data struct
 - **[DataStructure](/DataStructure/)**
     - [AVL Binary Search Tree](/DataStructure/AVLBinarySearchTree.java): Binary search tree with balancing methods to keep operation complexity around O(log(n)).
     - [Binary Tree](/DataStructure/BinaryTree.java)
+    - [Digraph](/DataStructure/Digraph.java)
     - [Max Binary Heap](/DataStructure/MaxHeap.java)
     - [Left leaning red-black Binary search tree](/DataStructure/LLRBTree.java): A red-black binary tree with insertion method.
     - [Linked List](/DataStructure/LinkedList.java)
