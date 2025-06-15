@@ -11,6 +11,7 @@ This repository contains Java code demonstrating various algorithms, data struct
     - **[Quick select](/other/QuickSelect.java)**
 - **[Search Algorithms](/search)** 
     - [Binary Search](/search/BinarySearch.java)
+    - [Breadth First Search](/search/DirectedBFS.java)
     - [Depth First Search](/search/DirectedDFS.java)
     - [Linear Search](/search/LinearSearch.java)
     - [Longest Substring](/search/LongestSubstring.java)
